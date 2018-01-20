@@ -18,31 +18,31 @@ The datasets used in experiment is apple2orange, vangogh2photo and summer_winter
 | apple orange apple |
 |--------------------|
 
-|![](results/apple2orange.png =512*256)|
+<center>![](results/apple2orange.png)</center>
 
 | orange apple  orange |
 
-![](results/orange2apple.png) 
+<center>![](results/orange2apple.png)</center>
 
 ### vangogh <-> photo
 
 | vangogh photo vangogh |
 
-![](results/vangogh2photo.png) 
+<center>![](results/vangogh2photo.png)</center>
 
 | photo vangogh photo |
 
-![](results/photo2vangogh.png) 
+<center>![](results/photo2vangogh.png)</center> 
 
 ### summer <-> winter
 
 | summer winter summer |
 
-![](results/summer2winter.png) 
+<center>![](results/summer2winter.png)</center> 
 
 | winter summer winter |
 
-![](results/winter2summary.png) 
+<center>![](results/winter2summary.png)</center> 
 
 ## Datasets
 * In the implementation of the CycleGAN, there are some datasets. Forexample, ae_photos, apple2orange, vangogh2photo and so on.
