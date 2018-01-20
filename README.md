@@ -50,7 +50,7 @@ The script will load the trained CycleGAN model to generate the transformed imag
 
 ## Downloading data/trained model
 * Run the **download_dataset.sh** to download these datasets, see the **download_dataset.sh** for details.
-* Pretrained model: [download](). 
+* Pretrained model: [[download]](https://drive.google.com/open?id=1IEjodVFAJJfnT-mp4xtNNSYbzcVFTK8W). 
 
 ## Discussion
 * When use vangogh2photo dataset as the training data, you will see the result from vangogh to photo is not good. I guess it relate to the vangogh dataset is too smalle, the vangogh dataset has only 400 images. So, in the process of training vangogh2photo, the network with vangogh2photo is not trained well.
