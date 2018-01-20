@@ -19,7 +19,7 @@ The datasets used in experiment is apple2orange, vangogh2photo and summer_winter
 |--------------------|
 
 # ![Mou icon](results/apple2orange.png =512x256)
-<img src="results/apple2orange.png" width="512" height="256" />
+<div align=center><img src="results/apple2orange.png" width="512" height="256" /></div>
 
 | orange apple  orange |
 
