@@ -18,7 +18,7 @@ The datasets used in experiment is apple2orange, vangogh2photo and summer_winter
 | apple orange apple |
 |--------------------|
 
-|![](results/apple2orange.png)|
+|![](results/apple2orange.png =512*256)|
 
 | orange apple  orange |
 
