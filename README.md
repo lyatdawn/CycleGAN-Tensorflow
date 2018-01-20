@@ -14,7 +14,9 @@ See requirements.txt for details.
 The datasets used in experiment is apple2orange, vangogh2photo and summer_winter, you can utilize other datasets for style transform using this codes. If so, you should change the training datasets. Here is the training results.
 
 ### apple <-> orange
+
 | apple orange apple |
+
 ![](results/apple2orange.png) 
 
 | orange apple  orange |
@@ -22,17 +24,23 @@ The datasets used in experiment is apple2orange, vangogh2photo and summer_winter
 ![](results/orange2apple.png) 
 
 ### vangogh <-> photo
+
 | vangogh photo vangogh |
+
 ![](results/vangogh2photo.png) 
 
 | photo vangogh photo |
+
 ![](results/photo2vangogh.png) 
 
 ### summer <-> winter
+
 | summer winter summer |
+
 ![](results/summer2winter.png) 
 
 | winter summer winter |
+
 ![](results/winter2summary.png) 
 
 ## Datasets
