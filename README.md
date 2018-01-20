@@ -15,33 +15,19 @@ The datasets used in experiment is apple2orange, vangogh2photo and summer_winter
 
 ### apple <-> orange
 
-| apple orange apple |
-|--------------------|
-
-# ![Mou icon](results/apple2orange.png =512x256)
-<div align=center><img src="results/apple2orange.png" width="512" height="256" /></div>
-
-| orange apple  orange |
+<div align=center><img src="results/apple2orange.png"!50p /></div>
 
 ![](results/orange2apple.png) 
 
 ### vangogh <-> photo
 
-| vangogh photo vangogh |
-
 ![](results/vangogh2photo.png) 
-
-| photo vangogh photo |
 
 ![](results/photo2vangogh.png) 
 
 ### summer <-> winter
 
-| summer winter summer |
-
 ![](results/summer2winter.png) 
-
-| winter summer winter |
 
 ![](results/winter2summary.png) 
 
