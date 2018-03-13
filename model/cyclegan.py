@@ -128,9 +128,8 @@ class CycleGAN(object):
         if self.use_lsgan:
             self.G_gen_loss = tf.reduce_mean(tf.squared_difference(self.pred_fake_Y, tf.ones_like(self.pred_fake_Y)))
         else:
-            # TODO: CycleGAN might can't use sigmoid_cross_entropy_with_logits as loss?
-            self.G_gen_loss = tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(self.pred_fake_Y), 
-                logits=self.pred_fake_Y)
+            self.G_gen_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(self.pred_fake_Y), 
+                logits=self.pred_fake_Y))
         # G_cycle_loss.
         self.G_cycle_loss = tf.reduce_mean(tf.abs(self.rec_X - self.real_X)) * self.lambda_G # L1 loss.
         # G_loss
@@ -140,9 +139,8 @@ class CycleGAN(object):
         if self.use_lsgan:
             self.F_gen_loss = tf.reduce_mean(tf.squared_difference(self.pred_fake_X, tf.ones_like(self.pred_fake_X)))
         else:
-            # TODO: CycleGAN might can't use sigmoid_cross_entropy_with_logits as loss?
-            self.F_gen_loss = tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(self.pred_fake_X),
-                logits=self.pred_fake_X)
+            self.F_gen_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels=tf.ones_like(self.pred_fake_X),
+                logits=self.pred_fake_X))
         # F_cycle_loss
         self.F_cycle_loss = tf.reduce_mean(tf.abs(self.rec_Y - self.real_Y)) * self.lambda_F # L1 loss.
         # F_loss
@@ -155,11 +153,10 @@ class CycleGAN(object):
             self.D_Y_fake_loss = tf.reduce_mean(
                 tf.squared_difference(self.pred_fake_Y, tf.zeros_like(self.pred_fake_Y)))
         else:
-            # TODO: CycleGAN might can't use sigmoid_cross_entropy_with_logits as loss?
-            self.D_Y_real_loss = tf.nn.sigmoid_cross_entropy_with_logits(
-                labels=tf.ones_like(self.pred_real_Y), logits=self.pred_real_Y)
-            self.D_Y_fake_loss = tf.nn.sigmoid_cross_entropy_with_logits(
-                labels=tf.zeros_like(self.pred_fake_Y), logits=self.pred_fake_Y)
+            self.D_Y_real_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(
+                labels=tf.ones_like(self.pred_real_Y), logits=self.pred_real_Y))
+            self.D_Y_fake_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(
+                labels=tf.zeros_like(self.pred_fake_Y), logits=self.pred_fake_Y))
         
         self.D_Y_loss = (self.D_Y_real_loss + self.D_Y_fake_loss) * 0.5
 
@@ -170,11 +167,10 @@ class CycleGAN(object):
             self.D_X_fake_loss = tf.reduce_mean(
                 tf.squared_difference(self.pred_fake_X, tf.zeros_like(self.pred_fake_X)))
         else:
-            # TODO: CycleGAN might can't use sigmoid_cross_entropy_with_logits as loss?
-            self.D_X_real_loss = tf.nn.sigmoid_cross_entropy_with_logits(
-                labels=tf.ones_like(self.pred_real_X), logits=self.pred_real_X)
-            self.D_X_fake_loss = tf.nn.sigmoid_cross_entropy_with_logits(
-                labels=tf.zeros_like(self.pred_fake_X), logits=self.pred_fake_X)
+            self.D_X_real_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(
+                labels=tf.ones_like(self.pred_real_X), logits=self.pred_real_X))
+            self.D_X_fake_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(
+                labels=tf.zeros_like(self.pred_fake_X), logits=self.pred_fake_X))
         
         self.D_X_loss = (self.D_X_real_loss + self.D_X_fake_loss) * 0.5
 
